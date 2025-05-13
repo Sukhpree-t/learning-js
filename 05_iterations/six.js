@@ -6,7 +6,7 @@
 //     return item
 // } )
 
-// console.log(values);
+//console.log(values);
 
 const myNum = [1,2,3,4,5,6,7,8];
 
