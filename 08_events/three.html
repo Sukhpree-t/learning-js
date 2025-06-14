@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Properties Example</title>
+    <style>
+        #myButton {
+            padding: 20px 40px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the button and check console for event properties</h2>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        const button = document.getElementById('myButton');
+
+        button.addEventListener('click', function(e) {
+            console.clear(); // Clear console for each click
+            console.log("type:", e.type);
+            console.log("timestamp:", e.timeStamp);
+            console.log("defaultPrevented:", e.defaultPrevented);
+            console.log("target:", e.target);
+            console.log("currentTarget:", e.currentTarget);
+            console.log("clientX:", e.clientX);
+            console.log("clientY:", e.clientY);
+            console.log("screenX:", e.screenX);
+            console.log("screenY:", e.screenY);
+            console.log("altKey:", e.altKey);
+            console.log("ctrlKey:", e.ctrlKey);
+            console.log("shiftKey:", e.shiftKey);
+            console.log("keyCode (undefined for click):", e.keyCode);
+        });
+
+        // Example for key event
+        document.addEventListener('keydown', function(e) {
+            console.clear();
+            console.log("type:", e.type);
+            console.log("timestamp:", e.timeStamp);
+            console.log("defaultPrevented:", e.defaultPrevented);
+            console.log("target:", e.target);
+            console.log("currentTarget:", e.currentTarget);
+            console.log("altKey:", e.altKey);
+            console.log("ctrlKey:", e.ctrlKey);
+            console.log("shiftKey:", e.shiftKey);
+            console.log("keyCode:", e.keyCode);
+            console.log("key:", e.key); // Modern replacement
+            console.log("code:", e.code); // Modern replacement
+        });
+    </script>
+
+</body>
+</html>
